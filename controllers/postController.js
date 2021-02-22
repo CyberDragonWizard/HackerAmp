@@ -33,4 +33,29 @@ router.post('/', (req, res) => {
     });
 });
 
+router.put('/:id', (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) 
+        return res.status(400).send(`No record with given id : ${req.params.id}`);
+
+    const post = {
+        title: req.body.title,
+        url: req.body.url,
+        description: req.body.description
+    };
+    Post.findByIdAndUpdate(req.params.id, { $set: post}, { new: true }, (err, doc) => {
+        if (!err) { res.send(doc); }
+        else { console.log('Error in Retrieving Post'); }
+    });
+});
+
+router.delete('/id', (req, res) => {
+    if (!ObjectId.isValid(req.params.id)) 
+        return res.status(400).send(`No record with given id : ${req.params.id}`);
+
+    Post.findOneAndRemove(req.params.id), (err, doc) => {
+        if (!err) { res.send(doc); }
+        else { console.log('Error in Post Save' + JSON.stringify(err, undefined, 2)); }
+    }
+})
+
 module.exports = router;

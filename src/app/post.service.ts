@@ -12,7 +12,7 @@ export class PostService {
   constructor(private _http: HttpClient) { }
 
   getPosts() {
-    return this._http.get("/posts")
+    return this._http.get("http://localhost:3000/posts")
       .map(result => this.result = result);
   }
 
