@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://admin:Dueytp42069@hackeramp.niw0d.mongodb.net/test', {
+mongoose.connect(`mongodb+srv://admin:${process.env.MONGOOSE}@hackeramp.niw0d.mongodb.net/test`, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,

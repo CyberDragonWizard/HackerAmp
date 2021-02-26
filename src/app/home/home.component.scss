@@ -1,0 +1,49 @@
+$accent-pink: #ec09a2;
+$accent-blue-2: #057eaa;
+$bg-blog: #0d171e;
+
+.btn2 {
+    float: none;
+    position: absolute;
+    bottom: 8px;
+    left: 30px;
+}
+
+.post-container {
+    border: 2px solid $accent-pink;
+    background-color: $bg-blog;
+    box-shadow: 0px 0px 16px $accent-pink;
+    padding: 26px;
+    margin-bottom: 30px;
+    position: relative;
+    border-radius: 7px;
+    height: 10%;
+}
+
+.post-container p {
+    margin: 50px 20px 40px 20px;
+}
+
+.post-title {
+    color: white;
+    font-size: 30px;
+    display: block;
+    font-weight: 400;
+}
+
+.posts {
+    margin-bottom:  30px;
+}
+
+.external svg {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    max-width: none;
+    left: 28px;
+    transition: .4s;
+}
+
+.external svg:hover {
+    transform: scale(1.1);
+}
