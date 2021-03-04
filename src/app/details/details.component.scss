@@ -1,0 +1,41 @@
+$accent-blue-2: #057eaa;
+
+.arrow {
+    width: 7%;
+    height: 7%;
+    fill: white;
+    transition: .3s;
+}
+
+.arrow:hover {
+    fill: #09aeec;
+}
+
+.arrow-link {
+    height: 85%;
+    width: 85%;
+    position: relative;
+    max-width: none;
+    left: -60px;
+    bottom: 120px;
+    transition: .5s;
+}
+
+.arrow-link:hover {
+    transform: scale(1.1);
+}
+
+.dets-title {
+    font-family: 'Quicksand';
+    font-size: 75px;
+    font-weight: 400;
+    line-height: 80px;
+    margin-top: 30px;
+    width: 650px;
+    color: white;
+}
+
+p {
+    font-size: 31px;
+    word-wrap: break-word;
+}

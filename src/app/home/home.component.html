@@ -3,25 +3,24 @@
         <div class='post-container'>
             <div class='row'>
                 <div class='column small-12 large-10'>
-                    <a routerLink='/details/{{ post._id }}' class='post-title'>Title</a>
+                    <a routerLink='/details/{{ post._id }}' class='post-title'>{{ post.title | length: 25}}</a>
                 </div>
                 <div class='column small-12 large-2 show-for-large'>
-                    <a href='#' target='_blank' class='external'>
+                    <a href='{{ post.url }}' target='_blank' class='external'>
                         <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.88 212.88">
-                            <defs>
-                                <style>.cls-1{fill:#09aeec;}.cls-2{fill:#0d171e;}
-
-                                </style>
-                            </defs>
-                            <circle class="cls-1" cx="106.44" cy="106.44" r="106.44"/>
-                            <path id="right-arrow" 
-                            class="cls-2" 
-                            d="M123.19,167.31a6.24,6.24,0,0,0-.07,12.47H186.7L81.8,284.68a6.17,6.17,0,0,0,0,8.73l0,0a6.25,6.25,0,0,0,8.83.08h0l104.9-104.9-.06,63.52a6.36,6.36,0,0,0,6.27,6.26,6.19,6.19,0,0,0,6.26-6.15V173.51a6.1,6.1,0,0,0-6-6.2H123.19Z" 
-                            transform="translate(-43.57 -124.88)"/>
+                            <g id='group'>
+                                <circle class="circle" cx="106.44" cy="106.44" r="106.44"/>
+                                <path id="right-arrow" 
+                                class="arrow-circle" 
+                                d="M123.19,167.31a6.24,6.24,0,0,0-.07,12.47H186.7L81.8,284.68a6.17,6.17,0,0,0,0,8.73l0,0a6.25,6.25,0,0,0,8.83.08h0l104.9-104.9-.06,63.52a6.36,6.36,0,0,0,6.27,6.26,6.19,6.19,0,0,0,6.26-6.15V173.51a6.1,6.1,0,0,0-6-6.2H123.19Z" 
+                                transform="translate(-43.57 -124.88)"/>
+                            </g>    
                         </svg>
                     </a>
                 </div>
-                <p>{{ post.description }}</p>
+                <div class='description'>
+                    <p>{{ post.description | length: 200}}</p>
+                 </div>
             <a routerLink='/details/{{ post._id }}' class='cta-btn btn2'>More Info</a>
             </div>
         </div>

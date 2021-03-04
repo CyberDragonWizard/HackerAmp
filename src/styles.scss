@@ -2,17 +2,53 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
 
-$bg: #091c27;
+$bg: #0a1d29;
 $text-color: white;
 $accent-orange: #ff8c18;
 $accent-blue: #09aeec;
 $accent-blue-2: #057eaa;
 $accent-pink: #ec09a2;
 
+body, html {
+    height: 100%;
+}
+
 body {
     background:$bg;
     color:$text-color;
     font-family: 'Quicksand';
+}
+
+h1 {
+    font-family: 'Quicksand';
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+#group {
+    cursor: pointer;
+}
+
+#group:hover .circle {
+    fill: #80d7f7;
+
+}
+
+.body-blur {
+    background: url(/assets/blur.jpg) no-repeat top center !important;
+    background-size: 90% !important;
+    height: 100%;
+}
+
+.circle {
+    fill: $accent-blue;
+    transition: .4s;
+}
+
+.arrow {
+    fill: black;
 }
 
 .cta-btn, .cta-btn:visited {
@@ -42,5 +78,6 @@ body {
 .cta-btn-post:hover {
     color:$accent-pink;
     border: 2px solid $accent-pink;
+    box-shadow: 0px 0px 8px $accent-pink;
 }
 

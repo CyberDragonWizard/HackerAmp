@@ -1,0 +1,62 @@
+$accent-blue: #09aeec;
+$accent-blue-2: #057eaa;
+
+.arrow {
+    width: 7%;
+    height: 7%;
+    fill: white;
+    transition: .3s;
+}
+
+.arrow:hover {
+    fill: $accent-blue;
+}
+
+.input-text {
+    background-color: #051119;
+    font-family: 'Quicksand';
+    color: white;
+    font-size: 32px;
+    height: 70px;
+    width: 500px;
+
+}
+
+.input-description {
+    background-color: #051119;
+    font-family: 'Quicksand';
+    color: white;
+    font-size: 28px;
+    height: 170px;
+    width: 1100px;
+}
+
+.input-title {
+    font-family: 'Quicksand';
+    font-size: 35px;
+    color: $accent-blue;
+}
+
+.post-btn {
+    color: #01384d;
+    font-family: 'Quicksand';
+    font-size: 30px;
+    height: 55px;
+    width: 160px;
+    border: none;
+    background-color: $accent-blue;
+    border-radius: 3px;
+    margin-top: 25px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px $accent-blue-2;
+    transition: .3s;
+}
+
+.post-btn:hover {
+    background-color: #55c9f3;
+    box-shadow: 0px 0px 15px $accent-blue-2;
+}
+
+.post-blog {
+    font-size: 58px;
+}

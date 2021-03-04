@@ -1,1 +1,33 @@
-<p>details works!</p>
+<div *ngIf='post' class='body-blur'>
+    <div class='row'>
+        <div class='columns small-12 medium-10'>
+            <a routerLink='/' id=back>
+                <svg class='arrow' version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	            viewBox="0 0 31.494 31.494" style="enable-background:new 0 0 31.494 31.494;" xml:space="preserve">
+                <path d="M10.273,5.009c0.444-0.444,1.143-0.444,1.587,0c0.429,0.429,0.429,1.143,0,1.571l-8.047,8.047h26.554
+	            c0.619,0,1.127,0.492,1.127,1.111c0,0.619-0.508,1.127-1.127,1.127H3.813l8.047,8.032c0.429,0.444,0.429,1.159,0,1.587
+	            c-0.444,0.444-1.143,0.444-1.587,0l-9.952-9.952c-0.429-0.429-0.429-1.143,0-1.571L10.273,5.009z"/>
+                </svg>
+            </a>
+                <h2 class='dets-title'>{{ post['title'] }}</h2>
+                <div class='columns small-12 medium-2'>
+                    <a href="{{ post['url'] }}" target='_blank' id='external-btn'>
+                        <svg class='arrow-link' id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 212.88 212.88">
+                            <defs>
+                                <style>.cls-1{fill:#09aeec;}.cls-2{fill:#0d171e;}
+                                </style>
+                            </defs>
+                            <circle class="cls-1" cx="106.44" cy="106.44" r="106.44"/>
+                            <path id="right-arrow" 
+                            class="cls-2" 
+                            d="M123.19,167.31a6.24,6.24,0,0,0-.07,12.47H186.7L81.8,284.68a6.17,6.17,0,0,0,0,8.73l0,0a6.25,6.25,0,0,0,8.83.08h0l104.9-104.9-.06,63.52a6.36,6.36,0,0,0,6.27,6.26,6.19,6.19,0,0,0,6.26-6.15V173.51a6.1,6.1,0,0,0-6-6.2H123.19Z" 
+                            transform="translate(-43.57 -124.88)"/>
+                        </svg>
+                    </a>
+                </div>
+        </div>
+    </div>
+    <div class='row columns'>
+        <p>{{ post['description'] }}</p>
+    </div>
+</div>

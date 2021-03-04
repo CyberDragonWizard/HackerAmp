@@ -1,6 +1,8 @@
 $accent-pink: #ec09a2;
+$accent-blue: #09aeec;
 $accent-blue-2: #057eaa;
 $bg-blog: #0d171e;
+
 
 .btn2 {
     float: none;
@@ -13,15 +15,23 @@ $bg-blog: #0d171e;
     border: 2px solid $accent-pink;
     background-color: $bg-blog;
     box-shadow: 0px 0px 16px $accent-pink;
-    padding: 26px;
-    margin-bottom: 30px;
+    padding: 20px;
     position: relative;
     border-radius: 7px;
-    height: 10%;
+    margin-bottom: 20px;
+    width: 360px;
+    height: 350px;
+    word-wrap: break-word;
+    transition: .4s;
+}
+
+.post-container:hover {
+    box-shadow: 0px 0px 24px #f36cc6;
 }
 
 .post-container p {
-    margin: 50px 20px 40px 20px;
+    margin: 100px 20px 40px 20px;
+    clear: both;
 }
 
 .post-title {
@@ -29,10 +39,16 @@ $bg-blog: #0d171e;
     font-size: 30px;
     display: block;
     font-weight: 400;
+    line-height: 33px;
+    transition: .3s;
+}
+
+.post-title:hover {
+    color: $accent-blue;
 }
 
 .posts {
-    margin-bottom:  30px;
+    margin-bottom:  15px;
 }
 
 .external svg {
@@ -40,10 +56,9 @@ $bg-blog: #0d171e;
     width: 50px;
     height: 50px;
     max-width: none;
-    left: 28px;
+    left: 23px;
     transition: .4s;
 }
 
 .external svg:hover {
-    transform: scale(1.1);
 }
