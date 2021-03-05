@@ -8,7 +8,8 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 
-const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/test`;
+// const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/test`;
+const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 mongoose.Promise = global.Promise;
 mongoose.connect(db, {useNewUrlParser: true, useUnifiedTopology: true }, function(err) {
