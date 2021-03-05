@@ -8,11 +8,11 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 
-// const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/test`;
-const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+let db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/test`;
+// const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(db, function(err) {
+mongoose.connect(process.env.MONGODB_URI || db, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
     if(err) console.log('Connection Error');
 });
 
