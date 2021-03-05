@@ -5,11 +5,10 @@
     "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
-    "install-src": "cd dist/hackeramp && npm install",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "npm run install-src && ng build --prod"
+    "heroku-postbuild": "ng build --prod"
   },
   "private": true,
   "dependencies": {
