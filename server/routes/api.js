@@ -16,6 +16,10 @@ mongoose.connect(process.env.MONGODB_URI || db, { useUnifiedTopology: true, useN
     if(err) console.log('Connection Error');
 });
 
+if (process.env.NODE_ENV === 'production') {
+    applicationCache.use(express.static('../dist/hackeramp'))
+}
+
 router.get('/posts', function(req, res) {
     console.log('Requesting posts');
     post.find({}).exec(function(err, posts) {
