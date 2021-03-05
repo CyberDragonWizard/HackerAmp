@@ -30,7 +30,7 @@ $bg-blog: #0d171e;
 }
 
 .post-container p {
-    margin: 100px 20px 40px 20px;
+    margin: 90px 20px 40px 20px;
     clear: both;
 }
 
@@ -40,6 +40,8 @@ $bg-blog: #0d171e;
     display: block;
     font-weight: 400;
     line-height: 33px;
+    text-transform: uppercase;
+    cursor: pointer;
     transition: .3s;
 }
 
@@ -58,4 +60,23 @@ $bg-blog: #0d171e;
     max-width: none;
     left: 23px;
     transition: .4s;
+}
+
+.external svg:hover {
+    transform: scale(1.03);
+}
+
+@media screen and (max-width: 39.9375em) {
+
+    .post-title {
+        font-size: 1.6;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+    .post-title {
+        font-size: 1.7em;
+        line-height: 1.4em;
+    }
 }

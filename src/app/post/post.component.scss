@@ -60,3 +60,49 @@ $accent-blue-2: #057eaa;
 .post-blog {
     font-size: 58px;
 }
+
+@media screen and (max-width: 39.9375em) {
+
+    .post-blog {
+        font-size: 2.5em;
+    }
+
+    .input-text {
+        width: 400px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .input-title {
+        font-size: 25px;
+    }
+
+    .input-description {
+        font-size: 18px;
+        height: 130px;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+    .post-blog {
+        font-size: 3.0em;
+    }
+
+    .input-text {
+        width: 400px;
+        height: 50px;
+        font-size: 22px;
+    }
+
+    .input-title {
+        font-size: 25px;
+    }
+
+    .input-description {
+        font-size: 18px;
+        height: 130px;
+    }
+}
+    
+

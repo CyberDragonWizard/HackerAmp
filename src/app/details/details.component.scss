@@ -12,8 +12,7 @@ $accent-blue-2: #057eaa;
 }
 
 .arrow-link {
-    height: 85%;
-    width: 85%;
+    width: 110px;
     position: relative;
     max-width: none;
     left: -60px;
@@ -38,4 +37,56 @@ $accent-blue-2: #057eaa;
 p {
     font-size: 31px;
     word-wrap: break-word;
+}
+
+@media screen and (max-width: 39.9375em) {
+    
+    #logo, .cta-btn-post {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .cta-btn-post {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .arrow-link{
+        width: 50px;
+        height: 50px;
+        left: 0px;
+        top: 0px;
+    }
+
+    .dets-title {
+        font-size: 2.5em;
+        line-height: 1.2em;
+        width: 500px;
+        word-wrap: break-word;
+    }
+}
+
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {
+
+    p {
+        font-size: 1.5em;
+    }
+
+    .arrow-link {
+        width: 80px;
+        height: 80px;
+        top: 0px;
+        left: 0px;
+    }
+
+    .dets-title {
+        font-size: 3.0em;
+        line-height: 1.2em;
+    }
+    
 }

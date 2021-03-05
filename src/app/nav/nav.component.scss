@@ -8,3 +8,21 @@
 #logo {
     width: 250px;
 }
+
+@media screen and (max-width: 39.9375em) {
+
+    #logo, .cta-btn-post {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .cta-btn-post {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .header {
+        margin-bottom: 0%
+    }
+}
