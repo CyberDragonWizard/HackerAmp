@@ -8,16 +8,16 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 
-let db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/test`;
-// const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
+let db2 = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/test`;
+const db = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@hackeramp.niw0d.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 mongoose.Promise = global.Promise;
-mongoose.connect(process.env.MONGODB_URI || db, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
+mongoose.connect( db || db2, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
     if(err) console.log('Connection Error');
 });
 
 if (process.env.NODE_ENV === 'production') {
-    applicationCache.use(express.static('../dist/hackeramp'))
+    applicationCache.use(express.static('../../dist/hackeramp'))
 }
 
 router.get('/posts', function(req, res) {
