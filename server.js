@@ -17,9 +17,8 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './dist/hackeramp/index.html'));
 });
 
-app.listen(process.env.PORT || 5000, function(){
-    console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  });
+const port = process.env.PORT || '3000';
+app.set('port', port);
 
 const server = http.createServer(app);
 
