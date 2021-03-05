@@ -3,12 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "npm start",
+    "start": "ng serve",
     "build": "ng build",
+    "install-src": "cd dist/hackeramp && npm install",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "heroku-postbuild": "ng build --prod"
+    "heroku-postbuild": "npm run install-src && ng build --prod"
   },
   "private": true,
   "dependencies": {
