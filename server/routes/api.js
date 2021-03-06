@@ -5,7 +5,7 @@ const post = require('../models/post');
 const Schema = require("../models/post");
 
 mongoose.Promise = global.Promise;
-mongoose.connect( process.env.MONGO_URI || process.env.MONGO_LOCAL, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
+mongoose.connect( process.env.MONGO_URI, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
     if(err) console.log('Connection Error');
 });
 

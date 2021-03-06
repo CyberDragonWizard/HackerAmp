@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
         res.sendFile(path.join(__dirname, 'dist', 'hackeramp', 'index.html'))
     })
 } else {
-    app.get('/', (req, res) => {
+    app.get('/posts', (req, res) => {
         res.send('API Running.')
     })
 }
