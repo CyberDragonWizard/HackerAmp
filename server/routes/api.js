@@ -3,20 +3,11 @@ const router = express.Router();
 const mongoose = require('mongoose');
 const post = require('../models/post');
 const Schema = require("../models/post");
-const dotenv = require("dotenv").config({ path: "./config.env"})
-
-dotenv.config()
-
-
 
 mongoose.Promise = global.Promise;
-mongoose.connect( MONGO_URI || MONGO+LOCAL, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
+mongoose.connect( process.env.MONGO_URI || process.env.MONGO_LOCAL, { useUnifiedTopology: true, useNewUrlParser: true }, function(err) {
     if(err) console.log('Connection Error');
 });
-
-if (process.env.NODE_ENV === 'production') {
-    app.use(express.static(path.join(__dirname, '../../dist/hackeramp')))
-}
 
 router.get('/posts', function(req, res) {
     console.log('Requesting posts');
