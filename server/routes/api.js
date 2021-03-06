@@ -15,7 +15,7 @@ mongoose.connect( MONGO_URI || MONGO+LOCAL, { useUnifiedTopology: true, useNewUr
 });
 
 if (process.env.NODE_ENV === 'production') {
-    applicationCache.use(express.static(path.join(__dirname, '../../dist/hackeramp')))
+    app.use(express.static(path.join(__dirname, '../../dist/hackeramp')))
 }
 
 router.get('/posts', function(req, res) {
