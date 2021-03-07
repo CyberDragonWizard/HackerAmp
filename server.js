@@ -1,13 +1,12 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const path = require('path');
 const app = express();
 require("dotenv").config({ path: "./config.env"});
 
 const api = require('./server/routes/api')
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
@@ -26,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const PORT = process.env.PORT;
-app.listen(PORT, () => console.log(`Server running on ${port}`));
+app.listen(PORT, () => console.log(`Server running on ${PORT}`));
 
 
 
