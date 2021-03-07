@@ -1,7 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
-const http = require('http');
 const app = express();
 require("dotenv").config({ path: "./config.env"});
 
@@ -27,11 +26,9 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const port = process.env.PORT || 3000;
-app.set('port', port);
+app.listen(port);
 
-const server = http.createServer(app);
 
-server.listen(port, () => console.log(`Running on localhost:${port}`));
 
 
 
