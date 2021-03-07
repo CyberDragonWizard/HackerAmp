@@ -17,8 +17,12 @@ app.use('/api', api);
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static(path.join(__dirname, '/dist/hackeramp')));
 
-    app.get('/api/posts', (req, res) => {
-        res.sendFile(path.join(__dirname, 'dist', 'hackeramp', 'index.html'))
+    app.get('*', (req, res) => {
+        res.sendFile(path.join(__dirname, 'dist/hackeramp/index.html'))
+    })
+} else {
+    app.get('/', (req, res) => {
+        res.send('API Running')
     })
 }
 
